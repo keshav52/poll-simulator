@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+      <h1>Vote :</h1>
+      <form method="POST" action="/users/vote">
+        <input required type="number" name="stuID" placeholder="Enter StudentID" />
+        
+        <% for(var cur in list ){ %>
+          <br>
+          <%=list[cur]%> <input type="radio" name="canID" value="<%=cur%>" >
+        <% } %>
+        
+        <br><br>
+        <button>Vote</button>   
+      </form>       
+  </body>
+</html>

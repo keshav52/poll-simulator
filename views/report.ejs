@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+      <div style="border: 1px solid black;">
+   <h1>Poll Result</h1>
+    
+   <%if(data.length > 0) {%> 
+    <h2>Win:<%=data[0].name%> (<%=data[0].vote%>) </h2>
+     <h2>Loss:<%=data[1].name%> (<%=data[1].vote%>) </h2>  
+     <% } %>
+
+</div>
+   <br><br>
+   <div style="border: 1px solid black;">
+   <h1>Voting Report</h1>
+   <% for(let a=0;a < data.length ; a++){ %>
+   <h2> <%=data[a].name %> (<%=data[a].vote%>)   </h2>
+    <%}%>
+</div>
+</body>
+</html>
